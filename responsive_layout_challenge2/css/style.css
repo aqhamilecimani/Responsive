@@ -1,0 +1,114 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* grid-container */
+.grid-container{
+  display: grid;
+  background-color: white;
+  grid-template-areas: 'header'
+  'nav'
+  'article'
+  'ads'
+  'footer';
+  height: 100vh;
+  width: 100%;
+  grid-gap: 10px;
+  padding: 20px;
+  margin: 0px;
+}
+/* grid-items */
+.header{
+  grid-area: header;
+}
+.article{
+  grid-area: article;
+}
+.ads{
+  grid-area: ads;
+}
+.footer{
+  grid-area: footer;
+}
+/* header */
+header{
+  background-color: black;
+  color: white;
+}
+/*footer  */
+footer{
+  background-color:black;
+  color: white;
+  height:auto;
+}
+footer a{
+  color:hotpink;
+}
+/*div topnav */
+.topnav{
+  width: 100%;
+  border: auto;
+  padding:10px;
+  list-style-type:none;
+}
+.topnav{
+  overflow: hidden;
+  background-color:black;
+}
+/* topnav anchor */
+.topnav a{
+  float:left;
+  display: block;
+  color:#f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover{
+  color: #EE2E31;
+  background-color: #ddd;
+}
+a{
+  text-decoration: none;
+}
+.topnav{
+  width: 100%;
+  border: auto;
+  padding:20px;
+}
+/* responsive_design */
+/*code for mobile devices smaller than 600px*/
+@media screen and (max-width:600px){
+  .grid-container{
+    display: grid;}
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px)
+  {
+    .grid-container{
+      display: grid;
+      grid-template-areas: 'header'
+      'nav'
+      'article'
+      'ads'
+      'footer'}
+    }
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width:992px) {
+      .grid-container{
+        display: grid;
+        grid-template-areas:  'header header header'
+        'nav article ads'
+        'footer footer footer';
+      }
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px)
+      {
+        .grid-container{
+          display: grid;
+          grid-template-areas: 'header header header'
+          'nav article ads'
+          'footer footer footer';}
+        }
